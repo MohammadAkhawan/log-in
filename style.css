@@ -55,15 +55,13 @@
 .form-section {
     width: 59vw;
     background-color: rgba(54, 82, 119, 0.1);
-    box-shadow:
-        -0.6px 0px 2.5px -10px rgba(0, 0, 0, 0.02),
+    box-shadow: -0.6px 0px 2.5px -10px rgba(0, 0, 0, 0.02),
         -1.3px 0px 6px -10px rgba(0, 0, 0, 0.028),
         -2.5px 0px 11.3px -10px rgba(0, 0, 0, 0.035),
         -4.5px 0px 20.1px -10px rgba(0, 0, 0, 0.042),
         -8.4px 0px 37.6px -10px rgba(0, 0, 0, 0.05),
-        -20px 0px 90px -10px rgba(0, 0, 0, 0.07)
-;
-
+        -20px 0px 90px -10px rgba(0, 0, 0, 0.07);
+}
 .description {
     height: 30vh;
     padding-top: 16vh;
@@ -93,7 +91,7 @@
 form {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 3vh;
 }
 
 .input {
@@ -108,7 +106,7 @@ form {
 }
 
 .input input {
-    height: 40px;
+    height: 4vh;
     font-size: 14px;
     padding: 0 8px;
     border: none;
@@ -116,11 +114,33 @@ form {
     border-radius: 5px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid rgba(3, 71, 155, 0.8);
+    box-shadow: 0px 0.3px 0.3px rgba(0, 0, 0, 0.008),
+        0px 0.7px 0.7px rgba(0, 0, 0, 0.012),
+        0px 1.3px 1.4px rgba(0, 0, 0, 0.015),
+        0px 2.2px 2.5px rgba(0, 0, 0, 0.018),
+        0px 4.2px 4.6px rgba(0, 0, 0, 0.022), 0px 10px 11px rgba(0, 0, 0, 0.03);
+}
+
 #last-name-input,
 #phone-number-input,
 #confirm-password-input {
     margin-left: auto;
 }
+
+#error {
+    visibility: hidden;
+    color: red;
+    font-size: 14px;
+}
+
 .submit {
     padding: 30px 72px;
     height: 30vh;
